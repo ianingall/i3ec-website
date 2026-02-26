@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I3ec Electronic Security Ltd | National Engineering Specialists</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="/"><img src="{{ url_for('static', filename='logo.png') }}" alt="I3ec Logo" class="logo"></a>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-slide" style="background-image: url('{{ url_for('static', filename='hero-retail.jpg') }}');">
+            <div class="hero-caption">Retail CCTV & AI Analytics to aid crime prevention</div>
+        </div>
+        <div class="hero-slide" style="background-image: url('{{ url_for('static', filename='hero-industrial.jpg') }}');">
+            <div class="hero-caption">Perimeter protection at critical national energy sites</div>
+        </div>
+        <div class="hero-slide" style="background-image: url('{{ url_for('static', filename='hero-commercial.jpg') }}');">
+            <div class="hero-caption">Securing large national infrastructure and RDCs</div>
+        </div>
+        <div class="hero-slide" style="background-image: url('{{ url_for('static', filename='hero-ng.jpg') }}');">
+            <div class="hero-caption">Securing critical national energy sites</div>
+        </div>
+        <div class="overlay">
+            <div class="container">
+                <p style="color: #ffffff; font-weight: bold; margin-bottom: 0; font-size: 1.8rem;">Welcome to</p>
+                <h1 style="color: #ffffff; font-size: 3.2rem; margin-top: 0; margin-bottom: 5px;">I3ec Electronic Security Ltd</h1>
+                <p style="font-size: 1.3rem; color: #58a6ff; font-weight: bold; margin-top: 0;">National Project Support | Design • Installation • Commissioning</p>
+                <div style="margin-top: 25px;">
+                    <button type="button" id="openModal" class="hero-btn">Discuss a Project</button>
+                    <button type="button" id="openJoinModal" class="hero-btn-alt" style="margin-left: 15px;">Join Our Network</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="services-section">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 40px; color: white;">Our Core Competencies</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fa-solid fa-video"></i>
+                    <h3>Electronic Security</h3>
+                    <p>Installation of advanced intruder systems, IP CCTV, and access control systems, integrating AI-driven analytics through to full technical commissioning.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-tower-broadcast"></i>
+                    <h3>External Perimeter Protection</h3>
+                    <p>Specialist installation of perimeter CCTV and intrusion detection with remote monitoring solutions, leveraging the latest AI-enhanced video analytics.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-fire-extinguisher"></i>
+                    <h3>Fire Alarm Installation</h3>
+                    <p>Professional installation of commercial fire detection and life safety systems in accordance with the latest British Standards (BS).</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-users-gear"></i>
+                    <h3>Sub-contracting</h3>
+                    <p>Strategic engineering support for national Tier-1 partners, providing seamless project delivery from initial installation to final handover.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 60px 0; background: #161b22; border-top: 1px solid #30363d; border-bottom: 1px solid #30363d;">
+        <div class="container text-center">
+            <h2 style="color: #58a6ff;">Engineers & Sub-Contractors</h2>
+            <p style="max-width: 700px; margin: 20px auto; color: #8b949e;">We are always looking for high-caliber, accredited engineers to support our national projects. If you have the skills and the right certifications, we want to hear from you.</p>
+            <button type="button" id="btnInquireWork" class="hero-btn">Inquire for Contract Work</button>
+        </div>
+    </section>
+
+    <section class="accreditations">
+        <div class="container text-center">
+            <div class="logo-grid">
+                <img src="{{ url_for('static', filename='ecs-photo.png') }}" alt="ECS">
+                <img src="{{ url_for('static', filename='ipaf-photo.png') }}" alt="IPAF">
+                <img src="{{ url_for('static', filename='sssts-photo.jpg') }}" alt="SSSTS">
+                <img src="{{ url_for('static', filename='spa-photo.jpg') }}" alt="SPA Passport">
+                <img src="{{ url_for('static', filename='chas-photo.jpg') }}" alt="CHAS">
+                <img src="{{ url_for('static', filename='pasma.png') }}" alt="PASMA">
+                <img src="{{ url_for('static', filename='ukata.png') }}" alt="UKATA">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="footer-contact">
+                <p>Email: <span class="email-text">info@i3ecsecurity.com</span></p>
+                <p>Office: 7 Swan Court, Forder Way, Hampton, Peterborough, PE7 8GX</p>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-legal">
+                <p>Registered in England and Wales | Company No: 11000446 | VAT No: 167661381 | ICO Reg: ZB439223</p>
+                <div class="footer-links">
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeContact">&times;</span>
+            <h2 style="color: #58a6ff;">Project Inquiry</h2>
+            <form action="https://formspree.io/f/xlgwwvol" method="POST">
+                <input type="text" name="name" placeholder="Contact Name" required>
+                <input type="text" name="company" placeholder="Company Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <textarea name="message" placeholder="Project details..." rows="4" required></textarea>
+                <button type="submit" class="hero-btn" style="width:100%;">Send Inquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="joinModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeJoin">&times;</span>
+            <h2 style="color: #58a6ff;">Join our Network</h2>
+            <form action="https://formspree.io/f/xlgwwvol" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="specialism" placeholder="Your Specialism" required>
+                <input type="text" name="accreditations" placeholder="Key Accreditations" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <textarea name="message" placeholder="Experience..." rows="3" required></textarea>
+                <button type="submit" class="hero-btn" style="width:100%;">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var contactModal = document.getElementById("contactModal");
+            var joinModal = document.getElementById("joinModal");
+            
+            var openContactBtn = document.getElementById("openModal");
+            var openJoinBtn = document.getElementById("openJoinModal");
+            var openWorkBtn = document.getElementById("btnInquireWork");
+            
+            var closeContact = document.getElementById("closeContact");
+            var closeJoin = document.getElementById("closeJoin");
+
+            openContactBtn.onclick = function() { contactModal.style.display = "flex"; }
+            openJoinBtn.onclick = function() { joinModal.style.display = "flex"; }
+            if (openWorkBtn) { openWorkBtn.onclick = function() { joinModal.style.display = "flex"; } }
+            
+            closeContact.onclick = function() { contactModal.style.display = "none"; }
+            closeJoin.onclick = function() { joinModal.style.display = "none"; }
+
+            window.onclick = function(event) {
+                if (event.target == contactModal) { contactModal.style.display = "none"; }
+                if (event.target == joinModal) { joinModal.style.display = "none"; }
+            }
+        });
+    </script>
+</body>
+</html>

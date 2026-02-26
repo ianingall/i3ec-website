@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I3ec Electronic Security Ltd | National Engineering Specialists</title>
@@ -17,33 +16,31 @@
         </div>
     </nav>
 
-  <header class="hero-section" style="position: relative; overflow: hidden;">
-    <div class="hero-slide" style="background-image: url('{{ url_for('static', filename='hero-retail.jpg') }}'); background-size: cover; background-position: center center; background-repeat: no-repeat; min-height: 100vh;">
-        <div class="hero-caption">Retail CCTV & AI Analytics to aid crime prevention</div>
-    </div>
-    <div class="hero-slide" style="background-image: url('{{ url_for('static', filename='hero-industrial.jpg') }}'); background-size: cover; background-position: center center; background-repeat: no-repeat; min-height: 100vh;">
-        <div class="hero-caption">Perimeter protection at critical national energy sites</div>
-    </div>
-    <div class="hero-slide" style="background-image: url('{{ url_for('static', filename='hero-commercial.jpg') }}'); background-size: cover; background-position: center center; background-repeat: no-repeat; min-height: 100vh;">
-        <div class="hero-caption">Securing large national infrastructure and RDCs</div>
-    </div>
-    <div class="hero-slide" style="background-image: url('{{ url_for('static', filename='hero-ng.jpg') }}'); background-size: cover; background-position: center center; background-repeat: no-repeat; min-height: 100vh;">
-        <div class="hero-caption">Securing critical national energy sites</div>
-    </div>
-
-    <div class="overlay" style="display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;">
-        <div class="container">
-            <p style="color: #ffffff; font-weight: bold; margin-bottom: 0; font-size: 1.5rem;">Welcome to</p>
-            <h1 style="color: #ffffff; font-size: 2.5rem; margin-top: 0; margin-bottom: 10px; line-height: 1.2;">I3ec Electronic Security Ltd</h1>
-            <p style="font-size: 1.1rem; color: #58a6ff; font-weight: bold; margin-top: 0; padding: 0 10px;">National Project Support | Design • Installation • Commissioning</p>
-            
-            <div style="margin-top: 25px; display: flex; flex-direction: column; align-items: center; gap: 15px;">
-                <button type="button" id="openModal" class="hero-btn" style="width: 80%; max-width: 300px; margin: 0;">Discuss a Project</button>
-                <button type="button" id="openJoinModal" class="hero-btn-alt" style="width: 80%; max-width: 300px; margin: 0;">Join Our Network</button>
+    <header class="hero-section">
+        <div class="hero-slide" style="background-image: url('{{ url_for('static', filename='hero-retail.jpg') }}');">
+            <div class="hero-caption">Retail CCTV & AI Analytics to aid crime prevention</div>
+        </div>
+        <div class="hero-slide" style="background-image: url('{{ url_for('static', filename='hero-industrial.jpg') }}');">
+            <div class="hero-caption">Perimeter protection at critical national energy sites</div>
+        </div>
+        <div class="hero-slide" style="background-image: url('{{ url_for('static', filename='hero-commercial.jpg') }}');">
+            <div class="hero-caption">Securing large national infrastructure and RDCs</div>
+        </div>
+        <div class="hero-slide" style="background-image: url('{{ url_for('static', filename='hero-ng.jpg') }}');">
+            <div class="hero-caption">Securing critical national energy sites</div>
+        </div>
+        <div class="overlay">
+            <div class="container">
+                <p style="color: #ffffff; font-weight: bold; margin-bottom: 0; font-size: 1.8rem;">Welcome to</p>
+                <h1 style="color: #ffffff; font-size: 3.2rem; margin-top: 0; margin-bottom: 5px;">I3ec Electronic Security Ltd</h1>
+                <p style="font-size: 1.3rem; color: #58a6ff; font-weight: bold; margin-top: 0;">National Project Support | Design • Installation • Commissioning</p>
+                <div style="margin-top: 25px;">
+                    <button type="button" id="openModal" class="hero-btn">Discuss a Project</button>
+                    <button type="button" id="openJoinModal" class="hero-btn-alt" style="margin-left: 15px;">Join Our Network</button>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <section class="services-section">
         <div class="container">
@@ -167,6 +164,4 @@
         });
     </script>
 </body>
-
 </html>
-
